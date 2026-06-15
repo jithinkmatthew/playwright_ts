@@ -1,0 +1,22 @@
+{
+  "name": "playwright_ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jithinkmatthew/playwright_ts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jithinkmatthew/playwright_ts/issues"
+  },
+  "homepage": "https://github.com/jithinkmatthew/playwright_ts#readme",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.3"
+  }
+}
