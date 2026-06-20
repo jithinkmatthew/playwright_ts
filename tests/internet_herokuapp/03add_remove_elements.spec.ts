@@ -6,12 +6,12 @@ test.describe('The Internet HerokuApp', () => {
     // Open the browser
     await page.goto('https://the-internet.herokuapp.com/');
 
-    await page.getByRole('link', { name: 'Add/Remove Elements' }).click();
-    await expect(page.locator("div[id='content'] h3")).toHaveText('Add/Remove Elements');
-
   });
 
   test('add and delete button operation', async ({ page }) => {
+
+    await page.getByRole('link', { name: 'Add/Remove Elements' }).click();
+    await expect(page.locator("div[id='content'] h3")).toHaveText('Add/Remove Elements');
       
     const addButton = page.getByRole('button', { name: 'Add Element' });
     const lastDeleteButton = page.locator('.added-manually').last();
