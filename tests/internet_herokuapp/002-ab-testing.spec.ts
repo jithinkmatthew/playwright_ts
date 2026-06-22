@@ -12,7 +12,7 @@ test.describe('The Internet HerokuApp', () => {
     await expect(page.locator("div[id='content'] h3")).toBeVisible();
     await expect(page.locator("div[id='content'] h3")).toContainText('A/B Test');
     
-    // Not needed in actual-test cases. Added this for demo purpose only
+    // Not needed in actual-test cases. For demo purpose only
     await page.waitForTimeout(500); 
   });
 

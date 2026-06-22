@@ -7,8 +7,8 @@ test.describe('The Internet HerokuApp', () => {
     await page.goto('https://the-internet.herokuapp.com/');
     await expect(page.locator("h1[class='heading']")).toBeVisible();
     
-    // Not needed in actual-test cases. Added this for demo purpose only
-    await page.waitForTimeout(500); 
+    // Not needed in actual-test cases. For demo purpose only
+    await page.waitForTimeout(300); 
   });
 
 });
