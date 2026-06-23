@@ -8,4 +8,7 @@ node_modules/
 /playwright/.cache/
 /playwright/.auth/
 
+# OCR language data
+eng.traineddata
+
 
