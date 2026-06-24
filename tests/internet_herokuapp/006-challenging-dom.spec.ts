@@ -39,7 +39,7 @@ test.describe('Challenging DOM - The Internet HerokuApp', () => {
     await page.goto('https://the-internet.herokuapp.com/challenging_dom');
 
     /** Wait until full page (including images & canvas) is loaded */
-    await page.waitForLoadState('networkidle');
+    await page.waitForLoadState('load');
 
     await expect(page.locator("div[class='example'] h3")).toHaveText('Challenging DOM');
 
@@ -75,7 +75,7 @@ test.describe('Challenging DOM - The Internet HerokuApp', () => {
     const { data } = await Tesseract.recognize(processed, 'eng', {
       tessedit_pageseg_mode: Tesseract.PSM.SINGLE_LINE,
       tessedit_char_whitelist: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789: ',
-    });
+    } as any);
 
     const canvasTextExtracted = data.text.replace(/[^a-zA-Z0-9:\s]/g, '').trim();
     const canvasTextExtractedDigit = canvasTextExtracted.match(/\d+/)?.[0];
@@ -100,7 +100,7 @@ test.describe('Challenging DOM - The Internet HerokuApp', () => {
     await page.goto('https://the-internet.herokuapp.com/challenging_dom');
 
     /** Wait until full page (including images & canvas) is loaded */
-    await page.waitForLoadState('networkidle');
+    await page.waitForLoadState('load');
 
     // await page.waitForTimeout(2000);
 
