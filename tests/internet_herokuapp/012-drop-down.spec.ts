@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('Dropdown List Tests - The Internet HerokuApp', () => {
+test.describe('Dropdown List - The Internet HerokuApp', () => {
 
   test('verify drop down functionality', async ({ page }) => {
     
@@ -26,5 +26,7 @@ test.describe('Dropdown List Tests - The Internet HerokuApp', () => {
     await dropdownMenu.selectOption({ value: '2' });
     await expect(selectedOption).toHaveText('Option 2');
 
+    await page.waitForTimeout(500);
+    
   });
 });
